@@ -1,7 +1,9 @@
 all:
   children:
     all-hosts:
-      hosts:
-        test-host:
-          ansible-host: 10.0.0.0
-          description: "Test Host"
+      children:
+        test-hosts-group:
+          hosts:
+            test-host:
+              ansible-host: 10.0.0.0
+              description: "Test Host"
